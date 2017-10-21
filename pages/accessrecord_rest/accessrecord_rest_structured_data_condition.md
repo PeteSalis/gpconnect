@@ -7,6 +7,8 @@ permalink: accessrecord_rest_structured_data_condition.html
 summary: "Condition"
 ---
 
+{% include structuredwarning.html %}
+
 ## Condition ##
 
 Search for all problems and health concerns for a patient. Fetches a bundle of all `Condition` resources for the specified patient.

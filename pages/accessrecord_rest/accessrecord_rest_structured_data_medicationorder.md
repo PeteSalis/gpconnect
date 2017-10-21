@@ -7,6 +7,8 @@ permalink: accessrecord_rest_structured_data_medicationorder.html
 summary: "Medication Order"
 ---
 
+{% include structuredwarning.html %}
+
 ## Medication Order ##
 
 Search for all medication order resources for a patient. Fetches a bundle of all `MedicationOrder` resources for the specified patient.

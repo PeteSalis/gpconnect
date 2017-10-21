@@ -7,6 +7,8 @@ permalink: accessrecord_rest_structured_data_allergyintolerance.html
 summary: "Allergy Intolerance"
 ---
 
+{% include structuredwarning.html %}
+
 ## Allergy Intolerance ##
 
 Search for all allergies for a patient. Fetches a bundle of all `AllergyIntolerance` resources for the specified patient.

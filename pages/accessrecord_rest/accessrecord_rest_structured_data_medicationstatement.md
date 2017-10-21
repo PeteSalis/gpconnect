@@ -7,6 +7,8 @@ permalink: accessrecord_rest_structured_data_medicationstatement.html
 summary: "Medication Statement"
 ---
 
+{% include structuredwarning.html %}
+
 ## Medication Statement ##
 
 Search for all medication statement resources for a patient. Fetches a bundle of all `MedicationStatement` resources for the specified patient.

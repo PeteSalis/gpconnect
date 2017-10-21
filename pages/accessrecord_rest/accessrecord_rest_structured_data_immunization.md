@@ -7,6 +7,8 @@ permalink: accessrecord_rest_structured_data_immunization.html
 summary: "Immunization"
 ---
 
+{% include structuredwarning.html %}
+
 ## Immunization ##
 
 Search for all immunization resources for a patient. Fetches a bundle of all `Immunization` resources for the specified patient.
