@@ -3,7 +3,7 @@ title: Release notes
 keywords: structured, getcarerecord, release notes
 tags: [structured,getcarerecord]
 sidebar: accessrecord_rest_sidebar
-permalink: accessrecord_rest_release_notes.html
+permalink: accessrecord_rest_overview_release_notes.html
 summary: "Release notes for the Access Record Structured capability pack"
 ---
 

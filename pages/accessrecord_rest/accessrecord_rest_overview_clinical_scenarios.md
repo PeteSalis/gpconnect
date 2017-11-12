@@ -3,7 +3,7 @@ title: Clinical scenarios
 keywords: getcarerecord
 tags: [getcarerecord]
 sidebar: accessrecord_rest_sidebar
-permalink: accessrecord_rest_clinical_scenarios.html
+permalink: accessrecord_rest_overview_clinical_scenarios.html
 summary: "Clinical scenarios for the Access Record Structured capability pack"
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: FHIR resource profiles
+title: List of FHIR resources
 keywords: getcarerecord
 tags: [getcarerecord]
 sidebar: accessrecord_rest_sidebar
-permalink: accessrecord_rest_datalibrary.html
-summary: "FHIR profiles used in the Access Record Structured capability pack"
+permalink: accessrecord_rest_development_resources_list.html
+summary: "List of FHIR resource profiles used in the Access Record Structured capability pack"
 ---
 
 {% include structuredwarning.html %}
@@ -33,3 +33,4 @@ The following profiled <span class="stu3">STU3</span> FHIR&reg; resources are us
 * [CareConnect-GPC-Condition-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Condition-1)
 * [CareConnect-GPC-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1)
 * [CareConnect-GPC-Immunization-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Immunization-1)
+* CareConnect-GPC-Encounter-1
