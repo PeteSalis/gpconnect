@@ -1,5 +1,5 @@
 ---
-title: Review a patient’s GP practice information in local care record
+title: Review GP practice information
 keywords: access record structured, use case, retrieve
 tags: [accessrecord_structured,use_case]
 sidebar: accessrecord_rest_sidebar
