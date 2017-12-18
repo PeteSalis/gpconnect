@@ -1,5 +1,5 @@
 ---
-title: Prescribe medication for patient in unscheduled care
+title: Prescribe medication in unscheduled care
 keywords: access record structured, use case, retrieve
 tags: [accessrecord_structured,use_case]
 sidebar: accessrecord_rest_sidebar
