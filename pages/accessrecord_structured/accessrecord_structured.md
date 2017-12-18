@@ -34,11 +34,11 @@ The feedback from these stakeholders has been used to develop the business use c
 
 ## Use cases ##
 
- - [care professional reviews a patient’s GP practice information](accessrecord_structured_use_case_patient_local_care_record.md)
- - [local care record delivers patient-centric summary](accessrecord_structured_use_case_patient_centric_local_care_record.md)
- - [clinician needs to prescribe medication in unscheduled care setting](accessrecord_structured_use_case_prescribe_unscheduled_care.md)
- - [clinician reconciles patient's medicines after acute care admission](accessrecord_structured_use_case_reconciliation_acute_care.md)
- - [urgent care user views patient's current medications held on GP system](accessrecord_structured_use_case_urgent_care_plan.md)
+ - [care professional reviews a patient’s GP practice information](accessrecord_structured_use_case_patient_local_care_record.html)
+ - [local care record delivers patient-centric summary](accessrecord_structured_use_case_patient_centric_local_care_record.html)
+ - [clinician needs to prescribe medication in unscheduled care setting](accessrecord_structured_use_case_prescribe_unscheduled_care.html)
+ - [clinician reconciles patient's medicines after acute care admission](accessrecord_structured_use_case_reconciliation_acute_care.html)
+ - [urgent care user views patient's current medications held on GP system](accessrecord_structured_use_case_urgent_care_plan.html)
  - [out of hours GP accesses patient’s medications, allergies and problems](accessrecord_structured_use_case_outofhours_GP.md)
 
 ## User stories and logical data model ##
