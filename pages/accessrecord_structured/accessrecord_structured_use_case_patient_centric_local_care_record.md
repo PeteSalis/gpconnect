@@ -1,5 +1,5 @@
 ---
-title: View patient-centric summary in local care record
+title: View patient-centric summary
 keywords: access record structured, use case, retrieve
 tags: [accessrecord_structured,use_case]
 sidebar: accessrecord_rest_sidebar
