@@ -43,5 +43,5 @@ The feedback from these stakeholders has been used to develop the business use c
 
 ## User stories and logical data model ##
 
- - spreadsheet containing user stories and logical data model
+ - [spreadsheet containing user stories and logical data model](GP%20Connect%20Req%20Cat%20-%20Access%20Record%20Structured%20Data%20v0.5.xlsx)
 
