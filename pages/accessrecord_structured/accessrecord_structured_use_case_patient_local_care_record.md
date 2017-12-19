@@ -57,8 +57,8 @@ Patient has been admitted onto the hospital’s Patient Administration System (P
 
  
 
-| Step number | Step |
-| ---- | -------------- | 
+| Step number | Step description |
+| :---- | :-------------- | 
 | Step 1 | Clinician requests the medication records for the patient using the LCR interface. |
 | Step 2 | The LCR identifies the patient’s GP practice endpoint using PDS/SDS lookup. |
 | Step 3 | The LCR requests the patient’s medication records from their registered GP practice. |
