@@ -63,19 +63,17 @@ Patient has been admitted onto the hospital’s Patient Administration System (P
 | Step 3 | The LCR requests the patient’s medication records from their registered GP practice. |
 | Step 4 | Spine Security Proxy (SSP) checks organisation to organisation sharing agreement exists between requesting organisation (LCR) and the patient’s registered GP practice, and that the interaction (for example, Get Medication Details) is part of the sharing agreement. |
 | Step 5 | GP practice clinical system checks patient permissions and consent to share. | 
-| Step 6 | 	The LCR receives the medication records via the GP Connect service and presents the results to the clinician within the LCR UI. 
+| Step 6 | 	The LCR receives the medication records via the GP Connect service and presents the results to the clinician within the LCR UI.<br>The following information is returned and presented in the LCR UI, as a minimum, for all medication records:<br>
 
-The following information is returned and presented in the LCR UI, as a minimum, for all medication records:
-
--	type of medication (for example, inpatient/outpatient/community
--	status of the medication (for example, active/cancelled/stopped)
--	priority of the medication (for example, routine/urgent/asap) 
--	details of medication to be taken (for example, Co-codamol 8mg/500mg)
--	request date/time
--	who wrote the prescription
--	details of supporting information/justification and reasons for writing the prescription
--	how the medication should be taken
--	how long the medication should be taken for
+type of medication (for example, inpatient/outpatient/community<br>
+status of the medication (for example, active/cancelled/stopped)<br>
+priority of the medication (for example, routine/urgent/asap)<br> 
+details of medication to be taken (for example, Co-codamol 8mg/500mg)<br>
+request date/time<br>
+-	who wrote the prescription<br>
+-	details of supporting information/justification and reasons for writing the prescription<br>
+-	how the medication should be taken<br>
+-	how long the medication should be taken for<br>
 -	any additional supplementary notes/annotations | 	
 | Step 7 | The clinician then reviews the information presented and determines the best course of action in response to the information. This may involve requesting additional data sets from GP Connect to supplement the data already presented within this list. | 
 | Exceptions |  | 
