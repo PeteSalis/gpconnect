@@ -16,6 +16,7 @@ A patient is admitted to hospital. The clinician responsible for the care of the
 ## Use case justification ##
 Currently, when a patient’s record is viewed in the LCR, their medication records from the GP practice clinical system are presented as a static HTML view from a third-party supplier. This view is rigid and not in keeping with the needs of professionals or the design of the system’s user interface (UI). Nor is it the preferred strategy for sharing a patient information within the LCR landscape. 
 
+### Scenarios ###
 Electronically consuming the FHIR-compliant profiles for a patient’s medication detail from their GP practice clinical system will allow the LCR to:
 -	share this data in a manner which is congruent and consistent with all other care partners
 -	present the data in a manner which is appropriate for the care setting
