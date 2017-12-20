@@ -22,13 +22,16 @@ Upon admission to or attendance at hospital, the attending clinician is responsi
 -	reduction in clinical time wasted (away from the patient) collecting and collating information
 -	reduction in clinical time wasted (away from the patient) manually updating IT systems
 -	reducing the paper flow through departments by utilising the systems workflow to manage tasks using staff time efficiently
+
 **Patient focused:**
 -	security of patient information is maintained and improved through the reduction of paper-based ‘patient identifiable documents’ in use within departments
 -	increased patient/clinician time due to reduction in time spent collecting and transcribing information away from the patient
 -	increased patient safety due to the reduction in manual transcription errors
 -	better patient experience as they are not being asked for information which should already be available to the clinician
+
 **Cost reduction:**
 -	reduction in printing supplies
+
 ## Primary actors ##
 -	clinician
 -	PAS/EPR
