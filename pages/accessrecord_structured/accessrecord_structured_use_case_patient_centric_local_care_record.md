@@ -7,10 +7,9 @@ permalink: accessrecord_structured_use_case_patient_centric_local_care_record.ht
 summary: "Use case for viewing patient-centric summary in local care record"
 ---
 
-## Use Case ##
-Patient-centric summary in local care record.
+## Use case ##
+**Patient-centric summary in local care record.**
 
-## Description ##
 The Local Care Record (LCR) development team intends to deliver an integrated patient summary, presented to every user when they first log into a patient record. To do this, it will require structured data from GP systems (hospital, community, mental health and social care data already comes in structured form).
 
 ### Scenarios ###
@@ -30,16 +29,16 @@ Any clinician/care giver who views the Local Care Record and is not a hospital u
 Non-hospital user accesses patient’s Local Care Record view of their patient to gain a snapshot of who is involved with the patient, what alerts, allergies, medications and so on are currently available.
 
 ## Preconditions ##
-Patient must be registered at a Local Care Record GP practice.
-Patient must have a valid NHS number.
-Patient must have data sharing preferences in their GP practice clinical system set to allow the sharing of data.
+- patient must be registered at a Local Care Record GP practice
+- patient must have a valid NHS number
+- patient must have data sharing preferences in their GP practice clinical system set to allow the sharing of data
 
 ## Postconditions ##
 **On success**
 -	patient data will be retrieved from the patient’s GP practice clinical system and incorporated into the summary screen displayed to the user
 
 **Guaranteed**
--	either the patient’s data, or an error message explaining why there is no data passed will be available to display in the patient summary screen
+-	either the patient’s data or an error message explaining why there is no data passed will be available to display in the patient summary screen
 
 ## Potential error messages ##
 -	No data available
@@ -63,11 +62,11 @@ Patient must have data sharing preferences in their GP practice clinical system 
 | Step 1 | LCR user attempts to access patient LCR record (either using a browser or a link within their local clinical system). |
 | Step 2 | LCR system identifies the patient’s GP practice endpoint using PDS/SDS lookup. |
 | Step 2a | Patient is not found at a GP practice. Standard hospital view is presented to user \- error message advising why no GP data available. |
-| Step 3 | Spine Security Proxy (SSP) checks organisation-to-organisation sharing agreement exists between requesting organisation (doctors) and the patient’s registered GP practice, and that the interaction (such as Get Medications) is part of the sharing agreement. |
+| Step 3 | Spine Security Proxy (SSP) checks that organisation-to-organisation sharing agreement exists between requesting organisation (doctors) and the patient’s registered GP practice, and that the interaction (such as Get Medications) is part of the sharing agreement. |
 | Step 3a | Patient is not registered at an LCR practice. Therefore, there is no data sharing agreement. A standard hospital view is presented to user \- error message advising why no GP data available. |
 | Step 4 | GP practice clinical system checks patient permissions and consent to share. |
 | Step 4a | Patient has not consented to share. Standard hospital view is presented to user \- error message advising why no GP data available. |
-| Step 5 | System makes a series of calls to GP Connect:<br>- Medications – medications within their prescribed periods (that is, active). For example, GP prescribes for 8 weeks on 1st February. This medication would show as active until 29th March, 8 weeks later. <br>- Acute<br>- Repeat<br>- Hospital (prescribed by hospital, recorded on GPSS).<br>- Who and when prescribed it. <br>- Allergies<br>- Allergy and severity (if available)<br>- who and when identified it<br>- conditions/problems<br>- Severity<br>- Who and when identified it<br>- Immunisation<br>- Which version<br>- Who and when gave vaccination<br>- Date<br>- Vaccine code<br>- Performer<br>- Vital signs<br>- Observations<br>- Procedures<br>- Encounter<br> For all data retrieved include date recorded. |
+| Step 5 | System makes a series of calls to GP Connect:<br>- Medications \- medications within their prescribed periods (that is, active). For example, GP prescribes for 8 weeks on 1st February. This medication would show as active until 29th March, 8 weeks later. <br>&nbsp;&nbsp;&nbsp;- Acute<br>&nbsp;&nbsp;&nbsp;- Repeat<br>&nbsp;&nbsp;&nbsp;- Hospital (prescribed by hospital, recorded on GPSS).<br>&nbsp;&nbsp;&nbsp;- Who and when prescribed it. <br>- Allergies<br>&nbsp;&nbsp;&nbsp;- Allergy and severity (if available)<br>&nbsp;&nbsp;&nbsp;- who and when identified it<br>- conditions/problems<br>&nbsp;&nbsp;&nbsp;- Severity<br>&nbsp;&nbsp;&nbsp;- Who and when identified it<br>- Immunisation<br>&nbsp;&nbsp;&nbsp;- Which version<br>&nbsp;&nbsp;&nbsp;- Who and when gave vaccination<br>&nbsp;&nbsp;&nbsp;- Date<br>&nbsp;&nbsp;&nbsp;- Vaccine code<br>&nbsp;&nbsp;&nbsp;- Performer<br>- Vital signs<br>&nbsp;&nbsp;&nbsp;- Observations<br>&nbsp;&nbsp;&nbsp;- Procedures<br>&nbsp;&nbsp;&nbsp;- Encounter<br>For all data retrieved include date recorded. |
 | Step 6 | System makes a series of calls to other 4 systems to which the patient has an open referral with (hospital, community, social care, mental health) requesting the summary dataset from each. |
 | Step 7 | The results of the calls made to each system are integrated into a series of melded views. |
 | Step 7a | Any errors returned from any/all the calls in previous steps will be displayed as part of the summary. |
