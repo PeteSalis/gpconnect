@@ -25,6 +25,9 @@ entries:
       url: /accessrecord_structured.html
       output: web, pdf
       type: homepage
+    - title: Release notes
+      url: /accessrecord_structured_release_notes.html
+      output: web, pdf
 
   - title: Development
     output: web, pdf
