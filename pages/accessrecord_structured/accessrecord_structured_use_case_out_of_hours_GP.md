@@ -2,7 +2,7 @@
 title: Access for out-of-hours GP
 keywords: access record structured, use case, retrieve
 tags: [accessrecord_structured,use_case]
-sidebar: accessrecord_rest_sidebar
+sidebar: accessrecord_structured_sidebar
 permalink: accessrecord_structured_use_case_out_of_hours_GP.html
 summary: "Use case for out-of-hours GP accessing patient’s medications, allergies and problems"
 ---

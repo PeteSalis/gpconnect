@@ -1,0 +1,35 @@
+entries:
+- title: Access Record Structured
+  product: Access Record Structured<br/>
+  version: 1.0.0-alpha.1
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction
+      url: /accessrecord_structured.html
+      output: web, pdf
+      type: homepage
+
+  - title: Development
+    output: web, pdf
+    folderitems:
+    
+    - title: Retrieve a patients record
+      url: /accessrecord_structured_development_retrieve_patient_record.html
+      output: web

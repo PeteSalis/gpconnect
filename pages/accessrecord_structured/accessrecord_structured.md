@@ -2,7 +2,7 @@
 title: Introduction
 keywords: getcarerecord
 tags: [getcarerecord]
-sidebar: accessrecord_rest_sidebar
+sidebar: accessrecord_structured_sidebar
 permalink: accessrecord_structured.html
 summary: "Introduction to the Access Record Structured capability pack"
 ---
