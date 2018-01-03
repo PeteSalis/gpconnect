@@ -30,7 +30,7 @@ topnav_dropdowns:
         - title: Access Record HTML
           url: accessrecord.html
         - title: Access Record Structured
-          url: accessrecord_rest.html
+          url: accessrecord_structured.html
         - title: Appointment Management
           url: appointments.html
         - title: Task Management
