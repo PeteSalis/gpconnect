@@ -86,7 +86,13 @@ The following data-elements are mandatory (i.e. data SHALL be present):
 The following data-elements SHOULD be populated if available:
 - Within the patient resource of the `registerPatient` parameter:
   - the `telecom` element SHOULD be populated
+	- the consumer SHALL NOT populate the `telecom.use` value with `old`
+	- the consumer SHOULD populate only one `telecom` per `telecom.use` value
+
   - the `address` element SHOULD be populated
+	- the consumer SHALL NOT populate the `address.use` value with `old`
+	- the consumer SHOULD populate only one `address` per `address.use` value
+	- the `address.use` value `home` SHOULD be mapped to PDS Address Use `HP` (Primary Home)
 
   {% include note.html content="The consumer SHOULD include telecom and address information within the temporary patient registration so that the receiving system has relevant contact details for the patient." %}
   {% include note.html content="The provider system receiving the telecom and address details SHOULD store these details in addition to any telecom or address details obtained through the PDS trace done as part of the patient registration." %}
@@ -225,7 +231,7 @@ Provider systems:
 - SHALL return a searchset `Bundle` profiled to [GPConnect-Searchset-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Searchset-Bundle-1) ![STU3](images/stu3.png) including the following resources 
 	- `Patient` profiled to [CareConnect-GPC-Patient-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Patient-1) ![STU3](images/stu3.png) containing details of the newly registered or re-activated patient. This will include details sourced from PDS.
 - SHALL populate the "registrationDetails" extension within the returned patient resource, within the "registrationDetails" extension:
-  - The "registrationType" should be populated with a value from the valueset which matches the registration type used within the provider system. If an appropriate registration type is not available within the valueset then the `Other` type should be use and more detail around the specific type of registration can be added using the "text" element of the CodeableConcept.
+  - The "registrationType" SHALL be populated with a value from the valueset which matches the registration type used within the provider system. If an appropriate registration type is not available within the valueset then the `Other` type SHALL be use and more detail around the specific type of registration SHOULD be added using the "text" element of the CodeableConcept.
 
 ```json
 {

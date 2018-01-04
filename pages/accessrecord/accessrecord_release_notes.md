@@ -9,10 +9,48 @@ summary: "Release notes for the various versions of the Access Record HTML capab
 
 #### 1.0.0-rc.6
 
-- Updated datalibrary to be capability specific, moving it to reside under the "Development" menu within the capability. This is to allow the Profiled FHIR Resources to be referenced per capability and updated independantly.
+- [Retrieve a care record section](accessrecord_use_case_retrieve_a_care_record_section.html)
+  - Updated example to match requirements for `Cache-Control` header to be `no-store`
+  - Updated error handling section to improve guidance around active patients and patient trace status.
 
+- [AccessRecord Resources](datalibraryaccessRecord.html)
+  - Changed the generic datalibrary page to be capability pack specific. This new resource page now resides under the "Development" menu within the capability. This is to allow the Profiled FHIR Resources to be referenced per capability and updated independantly.
+  
+- [HTML Implementation Guide](accessrecord_development_html_implementation_guide.html#section-title)
+  - [section title](accessrecord_development_html_implementation_guide.html#section-title) - Added additional guidance around the use of header tags with structure examples.
 
-#### 1.0.0-rc.5 (Released: 16th March)
+- [Encounters](accessrecord_view_encounters.html)
+  - Updated HTML View section to improve guidance.
+
+- [Clinical Items](accessrecord_view_clinical_items.html)
+  - Updated HTML View section to improve guidance.
+  
+- [Problems](accessrecord_view_problems.html)
+  - Updated HTML View section to improve guidance.
+  
+- [Allergies](accessrecord_view_allergies.html)
+  - Updated HTML View section to improve guidance.
+  
+- [Medications](accessrecord_view_medications.html)
+  - Updated HTML View section to improve guidance.
+  
+- [Referrals](accessrecord_view_referrals.html)
+  - Updated HTML View section to improve guidance.
+  
+- [Observations](accessrecord_view_observations.html)
+  - Updated HTML View section to improve guidance.
+  
+- [Investigations](accessrecord_view_investigations.html)
+  - Updated HTML View section to improve guidance.
+  
+- [Immunisations](accessrecord_view_immunisations.html)
+  - Updated HTML View section to improve guidance.
+  
+- [Administrative Items](accessrecord_view_administrative_items.html)
+  - Updated HTML View section to improve guidance.
+  
+  
+#### [1.0.0-rc.5 (Released: 16th March 2017)](https://github.com/nhsconnect/gpconnect/releases/tag/v1.0.0-rc.5)
 
 - Updated [Access Record Landing Page](accessrecord.html)
   - Removed details of structured record access as that's now covered in a seperate pack.
@@ -29,7 +67,7 @@ summary: "Release notes for the various versions of the Access Record HTML capab
 - Added page [Example Conformance Profile](accessrecord_development_conformance_profile.html)
   - New page with an example conformance profile for Access Record HTML.
 
-#### 1.0.0-rc.4 (Released: 20th February)
+#### [1.0.0-rc.4 (Released: 20th February 2017)](https://github.com/nhsconnect/gpconnect/releases/tag/v1.0.0-rc.4)
 
 - Updated [Access Record Design Decisions](accessrecord_design.html)
   - Wording uplifted to include GP Practice designated Confidential Items.
@@ -38,7 +76,7 @@ summary: "Release notes for the various versions of the Access Record HTML capab
 - Updated [Allergies](accessrecord_view_allergies.html)
   - Wording uplifted to reflect EMIS is not providing Historical Allergies.
 
-#### 1.0.0-rc.3 (Released: 6th February)
+#### [1.0.0-rc.3 (Released: 6th February 2017)](https://github.com/nhsconnect/gpconnect/releases/tag/v1.0.0-rc.3)
 
 - Updated [Access Record HTML Implementation Guide](accessrecord_development_html_implementation_guide.html)  
   - Added wording around 'In-transit' record to this page.
@@ -57,7 +95,7 @@ summary: "Release notes for the various versions of the Access Record HTML capab
   - Step 6 in the Operating Principle table - Data-Sharing validation check - interim DSAR solution within SSP, strategic solution out of scope for FoT.
 
 
-#### 1.0.0-rc.2 (Released: 6th December) 
+#### 1.0.0-rc.2 (Released: 6th December 2016) 
 
 - The elaboration of page(s) content to reflect the validation of data-sharing agreements by the Spine Security Proxy only, and the requirement that Provider Data-Sharing configuration should not be applied or changed for GP Connect interactions 
 - The application of a configurable Legal Exclusion set - currently the RGCP set on TRUD -  which is being reviewed with amendments/changes expected Feb 2017
