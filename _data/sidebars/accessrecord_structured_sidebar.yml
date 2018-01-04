@@ -24,7 +24,32 @@ entries:
     - title: Introduction
       url: /accessrecord_structured.html
       output: web, pdf
-      type: homepage
+      
+      subfolders:
+
+      - title: Clinical scenarios
+        output: web
+        subfolderitems:
+        
+        - title: Review GP practice information
+          url: /accessrecord_structured_use_case_patient_local_care_record.html
+          output: web
+        - title: View patient-centric summary
+          url: /accessrecord_structured_use_case_patient_centric_local_care_record.html
+          output: web
+        - title: Prescribe medication in unscheduled care
+          url: /accessrecord_structured_use_case_prescribe_unscheduled_care.html
+          output: web
+        - title: Reconcile patient’s medications
+          url: /accessrecord_structured_use_case_reconciliation_acute_care.html
+          output: web
+        - title: View urgent care plan
+          url: /accessrecord_structured_use_case_urgent_care_plan.html
+          output: web
+        - title: Access for out-of-hours GP
+          url: /accessrecord_structured_use_case_out_of_hours_GP.html
+          output: web
+
     - title: Release notes
       url: /accessrecord_structured_release_notes.html
       output: web, pdf
