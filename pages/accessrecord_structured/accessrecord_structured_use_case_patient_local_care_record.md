@@ -56,22 +56,79 @@ Patient has been admitted onto the hospital’s Patient Administration System (P
 ## Basic flow with alternative and exception flows ##
 
  
-
-| Step number | Step description |
-| :---- | :-------------- | 
-| Step 1 | Clinician requests the medication records for the patient using the LCR interface. |
-| Step 2 | The LCR identifies the patient’s GP practice endpoint using PDS/SDS lookup. |
-| Step 3 | The LCR requests the patient’s medication records from their registered GP practice. |
-| Step 4 | SSP checks that organisation to organisation sharing agreement exists between requesting organisation (LCR) and the patient’s registered GP practice, and that the interaction (for example, Get Medication Details) is part of the sharing agreement. |
-| Step 5 | GP practice clinical system checks patient permissions and consent to share. | 
-| Step 6 | 	The LCR receives the medication records via the GP Connect service and presents the results to the clinician within the LCR UI.<br>The following information is returned and presented in the LCR UI, as a minimum, for all medication records:<br><ul><li> type of medication (for example, inpatient/outpatient/community<li> status of the medication (for example, active/cancelled/stopped)<li> priority of the medication (for example, routine/urgent/asap)<li> details of medication to be taken (for example, Co-codamol 8mg/500mg)<li> request date/time<li> who wrote the prescription<li> details of supporting information/justification and reasons for writing the prescription<li> how the medication should be taken<li> how long the medication should be taken for<br><li> any additional supplementary notes/annotations</ul> | 	
-| Step 7 | The clinician then reviews the information presented and determines the best course of action in response to the information.<br>This may involve requesting additional data sets from GP Connect to supplement the data already presented within this list. | 
-| Exceptions |  | 
-| Step 4a | SSP sharing agreement between ‘to’ organisation and ‘from’ organisation doesn’t exist. | 
-| Step 4b | Exception is reported in LCR user interface; user is directed to contact local service desk for resolution. | 
-| Step 5a | The patient has not consented to the sharing of medical data from the GP practice. | 
-| Step 5b | Exception is reported in the LCR user interface. | 
-| Step 6a | A logic or integration exception occurs in the retrieval of data. | 
-| Step 6b | Exception is reported in the LCR user interface and is logged within the LCR’s exception tracing database; user is directed to contact local service desk for resolution. | 
-
+<table>
+	<tr>
+		<th>Step number</th>
+		<th>Step description</th>
+	</tr>
+	<tr>
+		<td>Step 1</td>
+		<td>Clinician requests the medication records for the patient using the LCR interface. </td>
+	</tr>
+	<tr>
+		<td>Step 2</td>
+		<td>The LCR identifies the patient’s GP practice endpoint using PDS/SDS lookup. </td>
+	</tr>
+	<tr>
+		<td>Step 3</td>
+		<td>The LCR requests the patient’s medication records from their registered GP practice. </td>
+	</tr>
+	<tr>
+		<td>Step 4</td>
+		<td>SSP checks that organisation to organisation sharing agreement exists between requesting organisation (LCR) and the patient’s registered GP practice, and that the interaction (for example, Get Medication Details) is part of the sharing agreement. </td>
+	</tr>
+	<tr>
+		<td>Step 5</td>
+		<td>GP practice clinical system checks patient permissions and consent to share. </td>
+	</tr>
+	<tr>
+		<td>Step 6</td>
+		<td>The LCR receives the medication records via the GP Connect service and presents the results to the clinician within the LCR UI.<br>The following information is returned and presented in the LCR UI, as a minimum, for all medication records:
+			<ul>
+				<li> type of medication (for example, inpatient/outpatient/community </li>
+				<li> status of the medication (for example, active/cancelled/stopped) </li>
+				<li> priority of the medication (for example, routine/urgent/asap) </li>
+				<li> details of medication to be taken (for example, Co-codamol 8mg/500mg) </li>
+				<li> request date/time</li>
+				<li> who wrote the prescription </li>
+				<li> details of supporting information/justification and reasons for writing the prescription </li>
+				<li> how the medication should be taken </li>
+				<li> how long the medication should be taken for </li>
+				<li> any additional supplementary notes/annotations </li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>Step 7</td>
+		<td>The clinician then reviews the information presented and determines the best course of action in response to the information.<br/>This may involve requesting additional data sets from GP Connect to supplement the data already presented within this list. </td>
+	</tr>
+	<tr>
+		<td>Exceptions</td>
+		<td>  </td>
+	</tr>
+	<tr>
+		<td>Step 4a</td>
+		<td>SSP sharing agreement between ‘to’ organisation and ‘from’ organisation doesn’t exist. </td>
+	</tr>
+	<tr>
+		<td>Step 4b</td>
+		<td>Exception is reported in LCR user interface; user is directed to contact local service desk for resolution. </td>
+	</tr>
+	<tr>
+		<td>Step 5a</td>
+		<td>The patient has not consented to the sharing of medical data from the GP practice. </td>
+	</tr>
+	<tr>
+		<td>Step 5b</td>
+		<td>Exception is reported in the LCR user interface. </td>
+	</tr>
+	<tr>
+		<td>Step 6a</td>
+		<td>A logic or integration exception occurs in the retrieval of data. </td>
+	</tr>
+	<tr>
+		<td>Step 6b</td>
+		<td>Exception is reported in the LCR user interface and is logged within the LCR’s exception tracing database; user is directed to contact local service desk for resolution. </td>
+	</tr>
+</table>
 
