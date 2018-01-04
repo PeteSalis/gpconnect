@@ -124,7 +124,7 @@ entries:
       url: /accessrecord.html
       output: web
     - title: Access Record Structured
-      url: /accessrecord_rest.html
+      url: /accessrecord_structured.html
       output: web
     - title: Appointment Management
       url: /appointments.html
