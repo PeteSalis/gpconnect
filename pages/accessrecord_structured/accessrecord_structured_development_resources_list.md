@@ -2,8 +2,8 @@
 title: List of FHIR resources
 keywords: getcarerecord
 tags: [getcarerecord]
-sidebar: accessrecord_rest_sidebar
-permalink: accessrecord_rest_development_resources_list.html
+sidebar: accessrecord_structured_sidebar
+permalink: accessrecord_structured_development_resources_list.html
 summary: "List of FHIR resource profiles used in the Access Record Structured capability pack"
 ---
 

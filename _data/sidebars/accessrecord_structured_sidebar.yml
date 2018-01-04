@@ -58,6 +58,87 @@ entries:
     output: web, pdf
     folderitems:
     
-    - title: Retrieve a patients record
-      url: /accessrecord_structured_development_retrieve_patient_record.html
-      output: web
+    - title: Introduction
+      url: /accessrecord_structured_development_introduction.html
+      output: web, pdf
+
+      subfolders:
+
+      - title: FHIR resources
+        output: web
+        subfolderitems:
+
+        - title: List of FHIR resources
+          url: /accessrecord_structured_development_resources_list.html
+          output: web
+
+        - title: Patient
+          url: /accessrecord_structured_development_resources_patient.html
+          output: web
+        - title: Organization
+          url: /accessrecord_structured_development_resources_organization.html
+          output: web
+        - title: Location
+          url: /accessrecord_structured_development_resources_location.html
+          output: web
+        - title: Practitioner
+          url: /accessrecord_structured_development_resources_practitioner.html
+          output: web
+        - title: PractitionerRole
+          url: /accessrecord_structured_development_resources_practitionerrole.html
+          output: web
+        - title: Device
+          url: /accessrecord_structured_development_resources_device.html
+          output: web
+        - title: AllergyIntolerance
+          url: /accessrecord_structured_development_resources_allergyintolerance.html
+          output: web
+        - title: Medication
+          url: /accessrecord_structured_development_resources_medication.html
+          output: web
+        - title: MedicationStatement
+          url: /accessrecord_structured_development_resources_medicationstatement.html
+          output: web
+        - title: MedicationOrder
+          url: /accessrecord_structured_development_resources_medicationorder.html
+          output: web
+        - title: Condition
+          url: /accessrecord_structured_development_resources_condition.html
+          output: web
+        - title: Immunization
+          url: /accessrecord_structured_development_resources_immunization.html
+          output: web
+        - title: Observation
+          url: /accessrecord_structured_development_resources_observation.html
+          output: web
+        - title: Encounter
+          url: /accessrecord_structured_development_resources_encounter.html
+          output: web
+
+      - title: Cross cutting guidance
+        output: web
+        subfolderitems:
+
+        - title: CodeableConcept
+          url: /accessrecord_structured_development_codeableconcept.html
+          output: web
+
+        - title: Degrade codes
+          url: /accessrecord_structured_development_degradecodes.html
+          output: web
+
+        - title: Negation and query codes
+          url: /accessrecord_structured_development_negationquerycodes.html
+          output: web
+
+        - title: Confidential record items
+          url: /accessrecord_structured_development_confidentialitems.html
+          output: web
+
+      - title: API use cases
+        output: web
+        subfolderitems:
+
+        - title: Retrieve a patients record
+          url: /accessrecord_structured_development_retrieve_patient_record.html
+          output: web
