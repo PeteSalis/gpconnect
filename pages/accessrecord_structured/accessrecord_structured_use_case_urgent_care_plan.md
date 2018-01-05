@@ -56,25 +56,93 @@ Urgent care user accesses urgent care plan and navigates to medication page of t
 
 ## Basic flow with alternative and exception flows ##
 
-| Step number       | Step description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|:-------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Step   1       |    User logs in from N3   network (or on non-N3 via authentication partner).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|    Step   2       |    User accesses a patient’s urgent   care plan.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|    Step   3       |    Care plan system confirms   the patient’s GP practice using Spine Directory Service (SDS)/Personal   Demographics Service (PDS) lookup.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|    Step   4       |    Urgent care user clicks on   the medications tab within system.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|    Step   5       |    Care   plan system requests the patients ‘Current Medication List’ from their   registered GP Practice.       The   term ‘current medication’ refers to medication prescribed to the patient (as   either a single prescription or an instance of a repeat prescription) within   the last three months.                                                                                                                                                                                                                                                                                                        |
-|    Step   6       |    Spine   Security Proxy (SSP) checks that an organisation to organisation sharing   agreement exists between requesting organisation (doctors) and the patient’s   registered GP practice, and that the interaction (for example, Get   Medications) is part of the sharing agreement.                                                                                                                                                                                                                                                                                                                           |
-|    Step   7       |    GP   practice clinical system checks patient permissions and consent to share.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|    Step   8       |    System   receives the ‘Current Medication List’ and presents the results to the clinician.       The   following information is returned with the following information:   <br>-            the date that the medication was prescribed    <br>-            the medication code   <br>-            the medication name   <br>-            the medication dosage   <br>-            the medication prescribed quantity   <br>-            the number of allowed repeats   <br>-            the number of issued repeats<br>Format to   be confirmed but could be presented in a similar way to the GP system   medication page layout.    |
-|    Step   9       |    Care   plan system will import the medication information into a temporary storage. This   will include mapping the data received into the care plan system’s own data   structures/coding for medications.                                                                                                                                                                                                                                                                                                                                                                                                     |
-|    Step   10      |    User   is then able to view current medications and act accordingly.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|    Exceptions     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|    Step   2a      |    GP practice is not found on   SDS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|    Step   3a      |    No   medications returned.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|    Step   4a      |    Patient   not returned.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|    Step   5a      |    Patient   consent not given.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|    Step   6a      |    GP   Connect connectivity down.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|    Step   7a      |    Current   medication is updated by GP and user re-checks.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-
+<table>
+	<tr>
+		<th>Step number</th>
+		<th>Step description</th>
+	</tr>
+	<tr>
+		<td>Step 1</td>
+		<td>User logs in from N3 network (or on non-N3 via authentication partner).</td>
+	</tr>
+	<tr>
+		<td>Step 2</td>
+		<td>User accesses a patient’s urgent care plan.</td>
+	</tr>
+	<tr>
+		<td>Step 3</td>
+		<td>Care plan system confirms the patient’s GP practice using Spine Directory Service (SDS)/Personal Demographics Service (PDS) lookup.</td>
+	</tr>
+	<tr>
+		<td>Step 4</td>
+		<td>Urgent care user clicks on the medications tab within system.</td>
+	</tr>
+	<tr>
+		<td>Step 5</td>
+		<td>Care plan system requests the patients ‘Current Medication List’ from their registered GP Practice. The term ‘current medication’ refers to medication prescribed to the patient (as either a single prescription or an instance of a repeat prescription) within the last three months.</td>
+	</tr>
+	<tr>
+		<td>Step 6</td>
+		<td>Spine Security Proxy (SSP) checks that an organisation to organisation sharing agreement exists between requesting organisation (doctors) and the patient’s registered GP practice, and that the interaction (for example, Get Medications) is part of the sharing agreement.</td>
+	</tr>
+	<tr>
+		<td>Step 7</td>
+		<td>GP practice clinical system checks patient permissions and consent to share.</td>
+	</tr>
+	<tr>
+		<td>Step 8</td>
+		<td>System receives the ‘Current Medication List’ and presents the results to the clinician.<br/>
+			<br/>
+			The following information is returned with the following information:
+				<ul>
+					<li>the date that the medication was prescribed</li>
+					<li>the medication code</li>
+					<li>the medication name</li>
+					<li>the medication dosage</li>
+					<li>the medication prescribed quantity</li>
+					<li>the number of allowed repeats</li>
+					<li>the number of issued repeats</li>
+				</ul>
+			<br/>
+			Format to   be confirmed but could be presented in a similar way to the GP system   medication page layout.
+		</td>
+	</tr>
+	<tr>
+		<td>Step 9</td>
+		<td>Care plan system will import the medication information into a temporary storage. This will include mapping the data received into the care plan system’s own data structures/coding for medications.</td>
+	</tr>
+	<tr>
+		<td>Step 10</td>
+		<td>User is then able to view current medications and act accordingly.</td>
+	</tr>
+	<tr>
+		<td>Exceptions</td>
+		<td/>
+	</tr>
+	<tr>
+		<td>Step 2a</td>
+		<td>GP practice is not found on SDS.</td>
+	</tr>
+	<tr>
+		<td>Step 3a</td>
+		<td>No medications returned.</td>
+	</tr>
+	<tr>
+		<td>Step 4a</td>
+		<td>Patient not returned.</td>
+	</tr>
+	<tr>
+		<td>Step 5a</td>
+		<td>Patient consent not given.</td>
+	</tr>
+	<tr>
+		<td>Step 6a</td>
+		<td>GP Connect connectivity down.</td>
+	</tr>
+	<tr>
+		<td>Step 7a</td>
+		<td>Current medication is updated by GP and user re-checks.</td>
+	</tr>
+</table>
 
 <sup>1</sup> [https://www.england.nhs.uk/wp-content/uploads/2014/03/psa-sup-info-med-error.pdf](https://www.england.nhs.uk/wp-content/uploads/2014/03/psa-sup-info-med-error.pdf)
