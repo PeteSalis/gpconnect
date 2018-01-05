@@ -71,7 +71,7 @@ Discharge summaries supplied from unscheduled care settings are required to prov
 		<td>Step 4</td><td>Spine Security Proxy validates calling endpoint and user as being an unscheduled care setting and by-passes data-sharing agreements for this information.</td>
 	</tr>
 	<tr>
-		<td>Step 5</td><td>GP practice clinical system checks patient permissions and consent to share.|
+		<td>Step 5</td><td>GP practice clinical system checks patient permissions and consent to share.</td>
 	</tr>
 	<tr>
 		<td>Step 6</td><td>
