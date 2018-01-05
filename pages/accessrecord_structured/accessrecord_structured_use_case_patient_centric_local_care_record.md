@@ -57,18 +57,91 @@ Non-hospital user accesses patient’s Local Care Record view of their patient t
 
 ## Basic flow with alternative and exception flows ##
 
-| Step number | Step description |
-|:---- |:-------------- | 
-| Step 1 | LCR user attempts to access patient LCR record (either using a browser or a link within their local clinical system). |
-| Step 2 | LCR system identifies the patient’s GP practice endpoint using PDS/SDS lookup. |
-| Step 2a | Patient is not found at a GP practice. Standard hospital view is presented to user \- error message advising why no GP data available. |
-| Step 3 | Spine Security Proxy (SSP) checks that organisation-to-organisation sharing agreement exists between requesting organisation (doctors) and the patient’s registered GP practice, and that the interaction (such as Get Medications) is part of the sharing agreement. |
-| Step 3a | Patient is not registered at an LCR practice. Therefore, there is no data sharing agreement. A standard hospital view is presented to user \- error message advising why no GP data available. |
-| Step 4 | GP practice clinical system checks patient permissions and consent to share. |
-| Step 4a | Patient has not consented to share. Standard hospital view is presented to user \- error message advising why no GP data available. |
-| Step 5 | System makes a series of calls to GP Connect:<ul><li>Medications - medications within their prescribed periods (that is, active). For example, GP prescribes for 8 weeks on 1st February. This medication would show as active until 29th March, 8 weeks later. <ul><li>Acute<li>Repeat<li>Hospital (prescribed by hospital, recorded on GPSS).<li>Who and when prescribed it. </ul><li>Allergies<ul><li>Allergy and Severity (if available)<li>Who and when identified it<li>Conditions/Problems<li> Severity<li>Who and when identified it</ul><li>Immunisation<ul><li>Which version<li> Who and when gave vaccination<li>Date<li>Vaccine code<li>Performer</ul> <li>Vital signs<li>Observations<li>Procedures<li>Encounter</ul>
-</ul><br>For all data retrieved include date recorded. | 
-| Step 6 | System makes a series of calls to other 4 systems to which the patient has an open referral with (hospital, community, social care, mental health) requesting the summary dataset from each. |
-| Step 7 | The results of the calls made to each system are integrated into a series of melded views. |
-| Step 7a | Any errors returned from any/all the calls in previous steps will be displayed as part of the summary. |
-
+<table>
+	<tr>
+		<th>Step number</th>
+		<th>Step description</th>
+	</tr>
+	<tr>
+		<td>Step 1</td>
+		<td>LCR user attempts to access patient LCR record (either using a browser or a link within their local clinical system).</td>
+	</tr>
+	<tr>
+		<td>Step 2</td>
+		<td>LCR system identifies the patient’s GP practice endpoint using PDS/SDS lookup.</td>
+	</tr>
+	<tr>
+		<td>Step 2a</td>
+		<td>Patient is not found at a GP practice. Standard hospital view is presented to user \- error message advising why no GP data available.</td>
+	</tr>
+	<tr>
+		<td>Step 3</td>
+		<td>Spine Security Proxy (SSP) checks that organisation-to-organisation sharing agreement exists between requesting organisation (doctors) and the patient’s registered GP practice, and that the interaction (such as Get Medications) is part of the sharing agreement.</td>
+	</tr>
+	<tr>
+		<td>Step 3a</td>
+		<td>Patient is not registered at an LCR practice. Therefore, there is no data sharing agreement. A standard hospital view is presented to user \- error message advising why no GP data available.</td>
+	</tr>
+	<tr>
+		<td>Step 4</td>
+		<td>GP practice clinical system checks patient permissions and consent to share.</td>
+	</tr>
+	<tr>
+		<td>Step 4a</td>
+		<td>Patient has not consented to share. Standard hospital view is presented to user \- error message advising why no GP data available.</td>
+	</tr>
+	<tr>
+		<td>Step 5</td>
+		<td>System makes a series of calls to GP Connect:<br/>
+			<br/>
+			<ul>
+				<li>Medications - medications within their prescribed periods (that is, active). For example, GP prescribes for 8 weeks on 1st February. This medication would show as active until 29th March, 8 weeks later.
+					<ul>
+						<li>Acute</li>
+						<li>Repeat</li>
+						<li>Hospital (prescribed by hospital, recorded on GPSS).</li>
+						<li>Who and when prescribed it.</li>
+					</ul>
+				</li>
+				<li>Allergies
+					<ul>
+						<li>Allergy and Severity (if available)</li>
+						<li>Who and when identified it</li>
+					</ul>
+				<li>Conditions/Problems</li>
+					<ul>
+						<li> Severity</li>
+						<li>Who and when identified it</li>
+					</ul>
+				</li>
+				<li>Immunisation
+					<ul>
+						<li>Which version</li>
+						<li> Who and when gave vaccination</li>
+						<li>Date</li>
+						<li>Vaccine code</li>
+						<li>Performer</li>
+					</ul>
+				</li>
+				<li>Vital signs</li>
+				<li>Observations</li>
+				<li>Procedures</li>
+				<li>Encounter</li>
+			</ul>
+			<br/>For all data retrieved include date recorded.
+		</td>
+	</tr>
+	<tr>
+		<td>Step 6</td>
+		<td>System makes a series of calls to other 4 systems to which the patient has an open referral with (hospital, community, social care, mental health) requesting the summary dataset from each.</td>
+	</tr>
+	<tr>
+		<td>Step 7</td>
+		<td>The results of the calls made to each system are integrated into a series of melded views.</td>
+	</tr>
+	<tr>
+		<td>Step 7a</td>
+		<td>Any errors returned from any/all the calls in previous steps will be displayed as part of the summary.</td>
+	</tr>
+</table>
+	

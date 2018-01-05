@@ -53,21 +53,86 @@ Discharge summaries supplied from unscheduled care settings are required to prov
 -	the list of allergies, adverse reactions and conditions are recorded on the EPMA. Access is recorded for auditing purposes
 
 ## Basic flow with alternative and exception flows ##
-| Step number | Step description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|:-------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Step 1      |    Clinician attempts to   prescribe medication.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Step 2      |    EPMA identifies the patient’s GP practice   endpoint using Personal Demographic Service (PDS)/Spine Directory Service (SDS)   lookup.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Step 3      |    EPMA requests list of current   allergies, adverse reactions and conditions from the patient’s registered GP.<br>Current   is defined as all allergies, adverse reactions and conditions that have been   recorded as being in effect at the current date, irrespective of when they   were added to the patient record.                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Step 4      |    Spine Security Proxy validates calling   endpoint and user as being an unscheduled care setting and by-passes data-sharing   agreements for this information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Step 5      |    GP practice clinical system checks   patient permissions and consent to share.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Step 6      |    The EPMA receives the list   of allergies, adverse reactions and conditions for review. On confirmation   the clinician accepts the list as valid the information is imported into the   system.   The following information   is provided:<br>- Allergies<br>&nbsp;&nbsp;&nbsp;- Allergic   Substance<br>&nbsp;&nbsp;&nbsp;- Reaction   Type<br>&nbsp;&nbsp;&nbsp;- Reaction<br>&nbsp;&nbsp;&nbsp;- Severity<br>&nbsp;&nbsp;&nbsp;- Date   Added<br>&nbsp;&nbsp;&nbsp;- Reported   By (clinician, patient)<br>&nbsp;&nbsp;&nbsp;- Confirmed   by Clinician<br>- Adverse Reactions<br>&nbsp;&nbsp;&nbsp;- Allergic   Substance<br>&nbsp;&nbsp;&nbsp;- Reaction   Type<br>&nbsp;&nbsp;&nbsp;- Reaction   Severity<br>&nbsp;&nbsp;&nbsp;- Date Added<br>&nbsp;&nbsp;&nbsp;- Reported   By (clinician, patient)<br>&nbsp;&nbsp;&nbsp;- Confirmed   by Clinician<br>- Conditions<br>&nbsp;&nbsp;&nbsp;- SNOMED   code for any diagnosed or long term condition    |
-| Step 7      |    Drugs to be prescribed are   checked by the EPMA against the allergic substance and conditions.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Step 8      |    Contraindications are   presented to the clinician within the context of the reaction type and   reaction severity as well as the reliability of the information for a   clinical decision. For example, a patient reported mild fatigue reaction to a   particular drug may be ignored as the effect of the medicine is more   important than this side effect for this patient.                                                                                                                                                                                                                                                                                                                                                        |
-| Step 9      |    Clinician makes decision to   prescribe. Drugs prescribed with warning confirmation of contraindications   acknowledged in audit.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Exceptions  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Step 2a     |    GP practice is not found on   SDS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Step 2b     |    Check allergies, adverse   reactions and conditions with patient.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Step 5a1    |    The patient is not found on   the GP practice clinical system.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Step 5b1    |    Check allergies, adverse   reactions and conditions with patient.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Step 5a2    |    The patient has not   consented to sharing the data from the GP practice.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Step 5b2    |    Check allergies, adverse   reactions and conditions with patient.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+
+<table>
+	<tr>
+		<th>Step number</th><th>Step description</th>
+	</tr>
+	<tr>
+		<td>Step 1</td><td>Clinician attempts to prescribe medication.</td>
+	</tr>
+	<tr>
+		<td>Step 2</td><td>EPMA identifies the patient’s GP practice endpoint using Personal Demographic Service (PDS)/Spine Directory Service (SDS) lookup.</td>
+	</tr>
+	<tr>
+		<td>Step 3</td><td>EPMA requests list of current allergies, adverse reactions and conditions from the patient’s registered GP.<br>Current is defined as all allergies, adverse reactions and conditions that have been recorded as being in effect at the current date, irrespective of when they were added to the patient record.</td>
+	</tr>
+	<tr>
+		<td>Step 4</td><td>Spine Security Proxy validates calling endpoint and user as being an unscheduled care setting and by-passes data-sharing agreements for this information.</td>
+	</tr>
+	<tr>
+		<td>Step 5</td><td>GP practice clinical system checks patient permissions and consent to share.|
+	</tr>
+	<tr>
+		<td>Step 6</td><td>
+			The EPMA receives the list of allergies, adverse reactions and conditions for review. On confirmation the clinician accepts the list as valid the information is imported into the system. The following information is provided:
+			<ul>
+				<li>Allergies
+					<ul>
+						<li>Allergic Substance</li>
+						<li>Reaction Type</li>
+						<li>Reaction Severity</li>
+						<li>Date   Added</li>
+						<li>Reported By (clinician, patient)</li>
+						<li>Confirmed by Clinician</li>
+					</ul>
+				</li>
+				<li>Adverse Reactions
+					<ul>
+						<li>Allergic Substance</li>
+						<li>Reaction Type</li>
+						<li>Reaction Severity</li>
+						<li>Date Added</li>
+						<li>Reported By (clinician, patient)</li>
+						<li>Confirmed by Clinician</li>
+					</ul>
+				</li>
+				<li>Conditions
+					<ul>
+						<li>SNOMED code for any diagnosed or long term condition</li>
+					</ul>
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td>Step 7</td><td>Drugs to be prescribed are checked by the EPMA against the allergic substance and conditions.</td>
+	</tr>
+	<tr>
+		<td>Step 8</td><td>Contraindications are presented to the clinician within the context of the reaction type and reaction severity as well as the reliability of the information for a clinical decision. For example, a patient reported mild fatigue reaction to a particular drug may be ignored as the effect of the medicine is more important than this side effect for this patient.</td>
+	</tr>
+	<tr>
+		<td>Step 9</td><td>Clinician makes decision to prescribe. Drugs prescribed with warning confirmation of contraindications acknowledged in audit.</td>
+	</tr>
+	<tr>
+		<td>Exceptions</td><td></td>
+	</tr>
+	<tr>
+		<td>Step 2a</td><td>GP practice is not found on SDS.</td>
+	</tr>
+	<tr>
+		<td>Step 2b</td><td>Check allergies, adverse reactions and conditions with patient.</td>
+	</tr>
+	<tr>
+		<td>Step 5a1</td><td>The patient is not found on the GP practice clinical system.</td>
+	</tr>
+	<tr>
+		<td>Step 5b1</td><td>Check allergies, adverse reactions and conditions with patient.</td>
+	</tr>
+	<tr>
+		<td>Step 5a2</td><td>The patient has not consented to sharing the data from the GP practice.</td>
+	</tr>
+	<tr>
+		<td>Step 5b2</td><td>Check allergies, adverse reactions and conditions with patient.</td>
+	</tr>
+</table>
