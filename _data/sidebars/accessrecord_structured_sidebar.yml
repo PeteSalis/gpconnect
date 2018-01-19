@@ -72,9 +72,9 @@ entries:
           url: /accessrecord_structured_development_resources_list.html
           output: web
 
-        - title: Patient
-          url: /accessrecord_structured_development_resources_patient.html
-          output: web
+#        - title: Patient
+#          url: /accessrecord_structured_development_resources_patient.html
+#          output: web
 #        - title: Organization
 #          url: /accessrecord_structured_development_resources_organization.html
 #          output: web
@@ -101,6 +101,9 @@ entries:
           output: web
         - title: MedicationRequest
           url: /accessrecord_structured_development_resources_medicationrequest.html
+          output: web
+        - title: Administrative resources
+          url: /accessrecord_structured_development_resources_administrativeresources.html
           output: web
 #        - title: Condition
 #          url: /accessrecord_structured_development_resources_condition.html
