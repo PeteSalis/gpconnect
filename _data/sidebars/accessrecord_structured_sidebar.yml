@@ -75,21 +75,21 @@ entries:
         - title: Patient
           url: /accessrecord_structured_development_resources_patient.html
           output: web
-        - title: Organization
-          url: /accessrecord_structured_development_resources_organization.html
-          output: web
-        - title: Location
-          url: /accessrecord_structured_development_resources_location.html
-          output: web
-        - title: Practitioner
-          url: /accessrecord_structured_development_resources_practitioner.html
-          output: web
-        - title: PractitionerRole
-          url: /accessrecord_structured_development_resources_practitionerrole.html
-          output: web
-        - title: Device
-          url: /accessrecord_structured_development_resources_device.html
-          output: web
+#        - title: Organization
+#          url: /accessrecord_structured_development_resources_organization.html
+#          output: web
+#        - title: Location
+#          url: /accessrecord_structured_development_resources_location.html
+#          output: web
+#        - title: Practitioner
+#          url: /accessrecord_structured_development_resources_practitioner.html
+#          output: web
+#        - title: PractitionerRole
+#          url: /accessrecord_structured_development_resources_practitionerrole.html
+#          output: web
+#        - title: Device
+#          url: /accessrecord_structured_development_resources_device.html
+#          output: web
         - title: AllergyIntolerance
           url: /accessrecord_structured_development_resources_allergyintolerance.html
           output: web
@@ -99,21 +99,21 @@ entries:
         - title: MedicationStatement
           url: /accessrecord_structured_development_resources_medicationstatement.html
           output: web
-        - title: MedicationOrder
-          url: /accessrecord_structured_development_resources_medicationorder.html
+        - title: MedicationRequest
+          url: /accessrecord_structured_development_resources_medicationrequest.html
           output: web
-        - title: Condition
-          url: /accessrecord_structured_development_resources_condition.html
-          output: web
-        - title: Immunization
-          url: /accessrecord_structured_development_resources_immunization.html
-          output: web
-        - title: Observation
-          url: /accessrecord_structured_development_resources_observation.html
-          output: web
-        - title: Encounter
-          url: /accessrecord_structured_development_resources_encounter.html
-          output: web
+#        - title: Condition
+#          url: /accessrecord_structured_development_resources_condition.html
+#          output: web
+#        - title: Immunization
+#          url: /accessrecord_structured_development_resources_immunization.html
+#          output: web
+#        - title: Observation
+#          url: /accessrecord_structured_development_resources_observation.html
+#          output: web
+#        - title: Encounter
+#          url: /accessrecord_structured_development_resources_encounter.html
+#          output: web
 
       - title: Cross cutting guidance
         output: web

@@ -11,9 +11,12 @@ summary: "List of FHIR resource profiles used in the Access Record Structured ca
 
 The following profiled <span class="stu3">STU3</span> FHIR&reg; resources are used in this capability pack:
 
-## Structural ##
+## Clinical ##
 
-* [GPC-Searchset-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Searchset-Bundle-1)
+* [CareConnect-GPC-AllergyIntolerance-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-AllergyIntolerance-1)
+* [CareConnect-GPC-Medication-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Medication-1)
+* [CareConnect-GPC-MedicationRequest-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-MedicationRequest-1)
+* [CareConnect-GPC-MedicationStatement-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-MedicationStatement-1)
 
 ## Administrative ##
 
@@ -24,13 +27,13 @@ The following profiled <span class="stu3">STU3</span> FHIR&reg; resources are us
 * [CareConnect-GPC-PractitionerRole-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-PractitionerRole-1)
 * [GPC-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPC-Device-1)
 
-## Clinical ##
+## Structural ##
 
-* [CareConnect-GPC-AllergyIntolerance-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-AllergyIntolerance-1)
-* [CareConnect-GPC-Medication-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Medication-1)
-* [CareConnect-GPC-MedicationRequest-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-MedicationRequest-1)
-* [CareConnect-GPC-MedicationStatement-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-MedicationStatement-1)
+* [GPC-Searchset-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Searchset-Bundle-1)
+
+<!---
 * [CareConnect-GPC-Condition-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Condition-1)
 * [CareConnect-GPC-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1)
 * [CareConnect-GPC-Immunization-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Immunization-1)
 * CareConnect-GPC-Encounter-1
+-->
