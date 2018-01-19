@@ -102,9 +102,6 @@ entries:
         - title: MedicationRequest
           url: /accessrecord_structured_development_resources_medicationrequest.html
           output: web
-        - title: Administrative resources
-          url: /accessrecord_structured_development_resources_administrativeresources.html
-          output: web
 #        - title: Condition
 #          url: /accessrecord_structured_development_resources_condition.html
 #          output: web
