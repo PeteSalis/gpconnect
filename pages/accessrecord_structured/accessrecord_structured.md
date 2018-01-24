@@ -30,7 +30,7 @@ This engagement has included:
  - commissioning support units
  - hospital trusts
  
-The feedback from these stakeholders has been used to develop the business use cases, user stories and a logical data model available below. These will form the basis of the technical specification and will be used to assure that the GP Connect API meet the needs of the business.
+The feedback from these stakeholders has been used to develop the business use cases, user stories and a logical data model available below. These will form the basis of the technical specification and will be used to assure that the GP Connect API meets the needs of the business.
 
 ## Use cases ##
 
