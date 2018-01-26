@@ -1,0 +1,40 @@
+---
+title: Medications
+keywords: getcarerecord
+tags: [getcarerecord]
+sidebar: accessrecord_structured_sidebar
+permalink: accessrecord_structured_development_resources_medication.html
+summary: "Guidance for populating and reading the Medication resource"
+---
+
+{% include structuredwarning.html %}
+
+## Introduction ##
+
+## The Medication Ordering Process ##
+
+### Acutes ###
+
+### Repeats ###
+
+### Repeat Dispensing ###
+
+### Medication Prescribed Elsewhere ###
+
+## FHIR Medications Profiles ##
+
+### Medication ###
+
+### Medication Statement ###
+
+### Medication Request ###
+
+## Using the FHIR Profiles to Model the Process ##
+
+### Acutes ###
+
+### Repeats ###
+
+### Repeat Dispensing ###
+
+### Medication Prescribed Elsewhere ###
