@@ -1,0 +1,44 @@
+---  
+title: List of FHIR resources  
+keywords: getcarerecord  
+tags: [getcarerecord]  
+sidebar: accessrecord_structured_sidebar  
+permalink: accessrecord_structured_development_resources_list.html  
+summary: "List of FHIR resource profiles used in the Access Record Structured capability pack"  
+---  
+  
+{% include structuredwarning.html %}  
+  
+## Consuminging the FHIR profiles  
+  
+### Introduction 
+ 
+### Consuming the medication profile
+  
+#### Mandatory fields  
+  
+#### Required fields  
+
+#### Optional fields  
+
+#### Fields that should not be used  
+ 
+### Consuminging the medication statement  
+  
+#### Mandatory fields  
+  
+#### Required fields  
+ 
+#### Optional fields  
+
+#### Fields that should not be used  
+
+### Consuming the medication request  
+ 
+#### Mandatory fields  
+
+#### Required fields  
+
+#### Optional fields  
+
+#### Fields that should not be used  
